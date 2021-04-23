@@ -5,7 +5,7 @@ import * as yup from "yup";
 
 import PizzaOrder from "./Pizza"
 import Homepage from "./Home"
-import Order from "./Order"
+// import Order from "./Order"
 import schema from "./validation"
 
 const defaultPlaceInfo = {
@@ -86,12 +86,22 @@ const App = () => {
       name: placeInfo.name,
       size: placeInfo.size,
       pepperoni: placeInfo.pepperoni ? "yes" : "no",
-      olives: placeInfo.sizolivese ? "yes" : "no",
+      olives: placeInfo.olives ? "yes" : "no",
       sausage: placeInfo.sausage ? "yes" : "no",
       pepper: placeInfo.pepper ? "yes" : "no",
       specialRequest: placeInfo.specialRequest,
     }
-    showSaved(savedOrder)
+    return (
+      <div>
+        <ul>Name: {savedOrder.name}</ul>
+        <ul>Size: {savedOrder.size}</ul>
+        <ul>Pepperoni: {savedOrder.pepperoni}</ul>
+        <ul>Olives: {savedOrder.olives}</ul>
+        <ul>Sausage: {savedOrder.sausage}</ul>
+        <ul>Pepper: {savedOrder.pepper}</ul>
+        <ul>SpecialRequest: {savedOrder.specialRequest}</ul>
+      </div>
+    )
     
   }
 
@@ -108,7 +118,7 @@ const App = () => {
       <Link id="order-pizza" to="/pizza">Pizza?</Link>
       <Link to="/">Home</Link>
 
-      <Route exact path="/">
+        <Route exact path="/">
           <Homepage />
         </Route>     
         <Route path="/pizza">
