@@ -16,6 +16,7 @@ export default function PizzaOrder(props){
 
     return (
         <form id="pizza-form" onSubmit={onSubmit}>
+            <img src="../Assets/Pizza.jpg" alt="pizzaImage" />
             <div className="container">
                 <label>Name
                     <input
