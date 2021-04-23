@@ -1,21 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { useHistory } from "react-router-dom";
 
-export default function Homepage(props){
+export default function Homepage() {
+    const history = useHistory()
+    const routeToOrder = () => {
+        history.push("/")
+    }
 
-
-
-
-
-
-
-
-
-<div className="container">
-<img />
-<h2>Are you Craving...</h2>
-<form onClick={}>
-  <button>Pizza?</button>
-</form>
-</div>
+    return (
+        <div>
+            <img className="homeImage" src="../Assets/pizza.jpg" />
+        </div>
+    )
 }
