@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
 import * as yup from "yup";
 
@@ -114,17 +114,21 @@ const App = () => {
 
   return (
     <>
-      <h1>Lambda Eats</h1>
-      <Link id="order-pizza" to="/pizza">Pizza?</Link>
-      <Link to="/">Home</Link>
-
-        <Route exact path="/">
-          <Homepage />
-        </Route>     
+      <nav>
+        <h1>Lambda Eats</h1>
+        <Link id="order-pizza" to="/pizza">Pizza</Link>
+        <Link to="/">Home</Link>
+      </nav>
+   
+    <Switch>
         <Route path="/pizza">
           <PizzaOrder info={placeInfo} update={updateInfo} submit={submitInfo} disabled={disabled} errors={errors} saveOrder={saveOrder} />
         </Route>
 
+        <Route exact path="/">
+          <Homepage />
+        </Route>  
+      </Switch>
       
     </>
   );

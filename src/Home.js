@@ -9,7 +9,8 @@ export default function Homepage() {
 
     return (
         <div>
-            <img className="homeImage" src="../Assets/pizza.jpg" />
+            <h1>Home Page</h1>
+            <img className="homeImage" src="../Assets/pizza.jpg" alt="" />
         </div>
     )
 }
