@@ -7,11 +7,12 @@ import Homepage from "./Home"
 
 const defaultPlaceInfo = {
   name: "",
-  cost: "",
-  style: "",
-  foodType: "",
-  time: "",
-  deliveryFee: "",
+  size: "",
+  pepperoni: false,
+  olives: false,
+  sausage: false,
+  pepper: false,
+
 }
 
 const App = () => {
